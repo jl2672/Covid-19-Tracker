@@ -1,0 +1,29 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  margin: 0 2%;
+  padding: 8%;
+}
+
+.confirmed {
+  @extend .card;
+  border-top: 10px solid 'blue';
+}
+
+.recovered {
+  @extend .card;
+  border-top: 10px solid 'green';
+}
+
+.deaths {
+  @extend .card;
+  border-top: 10px solid 'red';
+}
+
+.number {
+  font-size: 0.1em;
+}
