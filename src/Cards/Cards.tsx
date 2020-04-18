@@ -24,21 +24,27 @@ const Cards: React.FC = (): JSX.Element => {
       <Grid item xs={12} md={3}>
         <Card className={styles.card}>
           <Typography variant="h5">Confirmed Cases:</Typography>
-          <Typography variant="h6"><CountUp end={data?.confirmed.value || 0} duration={1.5} /></Typography>
+          <Typography variant="h6">
+            <CountUp end={data?.confirmed.value || 0} duration={1.5} separator="," />
+          </Typography>
           <Typography color="textSecondary">Last updated: {new Date(date).toDateString()}</Typography>
         </Card>
       </Grid>
       <Grid item xs={12} md={3}>
         <Card className={styles.card}>
           <Typography variant="h5">Recovered Cases:</Typography>
-          <Typography variant="h6"><CountUp end={data?.recovered.value || 0} duration={1.5} /></Typography>
+          <Typography variant="h6">
+            <CountUp end={data?.recovered.value || 0} duration={1.5} separator="," />
+          </Typography>
           <Typography color="textSecondary">Last updated: {new Date(date).toDateString()}</Typography>
         </Card>
       </Grid>
       <Grid item xs={12} md={3}>
         <Card className={styles.card}>
           <Typography variant="h5">Deaths:</Typography>
-          <Typography variant="h6"><CountUp end={data?.deaths.value || 0} duration={1.5} /></Typography>
+          <Typography variant="h6">
+            <CountUp end={data?.deaths.value || 0} duration={1.5} separator="," />
+          </Typography>
           <Typography color="textSecondary">Last updated: {new Date(date).toDateString()}</Typography>
         </Card>
       </Grid>
